@@ -19,7 +19,7 @@ import NoteContext from "./noteContext";
 const NoteState = (props) => {
   const notesInitial = [
     {
-      _id: "65f927a1954e27bcc4dfb3dc",
+      _id: "65f927a1954e27bcc4d3b3dc",
       user: "65f7d5ccda1a0b9b9b9683bc",
       title: "My Title",
       description: "Please wake up early",
@@ -28,7 +28,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65f927a2954e27bcc4dfb3de",
+      _id: "65f927a2954e27bcc4dfd6de",
       user: "65f7d5ccda1a0b9b9b9683bc",
       title: "My Title",
       description: "Please wake up early",
@@ -37,7 +37,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65f92bc2954e27bcc4dfb3e2",
+      _id: "65f92bc2954e27bcc4dfb2e2",
       user: "65f7d5ccda1a0b9b9b9683bc",
       title: "New note",
       description: "Please access the playlist",
@@ -46,7 +46,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65f92bc2954e27bcc4dfb3e2",
+      _id: "65f92bc2954e27bcc4dfb3e23",
       user: "65f7d5ccda1a0b9b9b9683bc",
       title: "New note",
       description: "Please access the playlist",
@@ -55,7 +55,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65f92bc2954e27bcc4dfb3e2",
+      _id: "65f92bc2954e27bcc4dfb3e21",
       user: "65f7d5ccda1a0b9b9b9683bc",
       title: "New note",
       description: "Please access the playlist",
@@ -64,7 +64,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "65f92bc2954e27bcc4dfb3e2",
+      _id: "65f92bc2954e27bcc4dfb3ef2",
       user: "65f7d5ccda1a0b9b9b9683bc",
       title: "New note",
       description: "Please access the playlist",
@@ -91,7 +91,14 @@ const NoteState = (props) => {
     setNotes(notes.concat(note));
   };
   //Delete a Note
-  const deleteNote = () => {};
+  const deleteNote = (id) => {
+    // TODO: API call
+    console.log("Deleting the note with id" + id);
+    const newNotes = notes.filter((note) => {
+      return note._id !== id;
+    });
+    setNotes(newNotes);
+  };
 
   //Edit a Note
   const editNote = () => {};
